@@ -1,10 +1,30 @@
 package org.skypro.question;
 
 /**
- * Модель вопроса
+ * Сущность вопроса с полями question и answer
  */
 public class Question {
-    private Long id;
-    private String text;
+    private String question;
     private String answer;
+
+    public Question(String question, String answer) {
+        this.question = question;
+        this.answer = answer;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question){
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
 }
