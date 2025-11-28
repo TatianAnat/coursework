@@ -1,7 +1,6 @@
 package org.skypro.question;
-
-import java.util.List;
+import java.util.Set;
 
 public interface ExaminerService {
-    List<Question> getQuestions();
+    Set<Question> getQuestions();
 }

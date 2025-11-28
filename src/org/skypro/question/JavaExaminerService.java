@@ -1,6 +1,6 @@
 package org.skypro.question;
 
-import java.util.List;
+import java.util.Set;
 
 public class JavaExaminerService implements ExaminerService {
     private final JavaQuestionService javaQuestionService;
@@ -10,7 +10,7 @@ public class JavaExaminerService implements ExaminerService {
     }
 
     @Override
-    public List<Question> getQuestions() {
+    public Set<Question> getQuestions() {
         return javaQuestionService.findAllQuestions();
     }
 }
