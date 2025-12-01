@@ -33,7 +33,7 @@ class ExaminerServiceImplTest {
 
     @Test
     void getRandomUniqueQuestions_ThrowsWhenRequestMoreThanAvailable() {
-        assertThrows(org.springframework.web.server.ResponseStatusException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> examinerService.getRandomUniqueQuestions(3));
     }
 

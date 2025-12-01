@@ -22,9 +22,9 @@ public class ExaminerServiceImpl implements ExaminerService {
      */
     public Set<Question> getRandomUniqueQuestions(int amount) {
         int available = questionService.findAllQuestions().size();
-        if (amount > available) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                    "Requested more questions than available");
+        if (amount > available || amount <= 0) {
+            throw new IllegalArgumentException(
+                    "Requested" + amount +  "questions, but only" + available + "available");
         }
 
         Set<Question> uniqueQuestions = new HashSet<>();

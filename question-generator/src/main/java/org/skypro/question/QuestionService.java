@@ -1,6 +1,6 @@
 package org.skypro.question;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Интерфейс сервиса по работе с вопросами
@@ -8,6 +8,6 @@ import java.util.List;
 public interface QuestionService {
     void addQuestion(Question question);
     boolean removeQuestion(Question question);
-    List<Question> findAllQuestions();
+    Set<Question> findAllQuestions();
     Question getRandomQuestion();
 }

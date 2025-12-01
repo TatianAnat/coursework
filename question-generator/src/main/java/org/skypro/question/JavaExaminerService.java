@@ -11,6 +11,6 @@ public class JavaExaminerService implements ExaminerService {
 
     @Override
     public Set<Question> getQuestions() {
-        return javaQuestionService.findAllQuestions();
+        return (Set<Question>) javaQuestionService.findAllQuestions();
     }
 }

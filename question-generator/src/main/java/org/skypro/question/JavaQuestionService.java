@@ -3,6 +3,7 @@ package org.skypro.question;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * реализация QuestionService для вопросов Java
@@ -22,7 +23,7 @@ public class JavaQuestionService implements QuestionService {
     }
 
     @Override
-    public List<Question> findAllQuestions() {
+    public Set<Question> findAllQuestions() {
         return new ArrayList<>(questions);
     }
 
