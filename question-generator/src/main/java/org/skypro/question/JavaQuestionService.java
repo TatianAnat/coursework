@@ -1,9 +1,6 @@
 package org.skypro.question;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * реализация QuestionService для вопросов Java
@@ -24,7 +21,7 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Set<Question> findAllQuestions() {
-        return new ArrayList<>(questions);
+        return new HashSet<>(questions);
     }
 
     @Override
